@@ -5,14 +5,12 @@
 .intro-container {
     display: flex;
     justify-content: center;
-    gap: 100px;
     background-color: var(--secondary);
     padding: 0px 0;
     align-items: center;
 }
 
 .intro-left, .intro-right {
-    min-width: 500px;
     display: flex;
     align-items: center;
 }

@@ -1,6 +1,5 @@
 :root{
     --gap: 60px;
-    --tile-height: 320px;
     --shadow: 0 8px 20px rgb(214, 214, 214);
 }
 
@@ -19,8 +18,9 @@
 /* Tile */
 .work-project-tile{
     background:var(--background);
+    height:fit-content;
     border-radius:12px;
-    overflow:hidden;
+    overflow: hidden;
     display:flex;
     flex-direction:column;
     box-shadow:var(--shadow);
@@ -36,7 +36,7 @@
 /* top half image area */
 .work-tile-image{
     height:50%; /* top half */
-    min-height:120px;
+    /* min-height:120px; */
     position:relative;
     flex:0 0 50%;
 }
