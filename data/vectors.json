@@ -1,0 +1,22 @@
+{
+    "RAG": {
+        "vector": {"x": 0.5773, "y": 0.5773, "z": 0.5773},
+        "tag": "RAG",
+        "description": "Retrieval Augmented Generation"
+    },
+    "DSA": {
+        "vector": {"x": -0.5773, "y": 0.5773, "z": 0.5773},
+        "tag": "DSA",
+        "description": "Data Structures and Algorithms"
+    },
+    "RL": {
+        "vector": {"x": 0.5773, "y": -0.5773, "z": 0.5773},
+        "tag": "RL",
+        "description": "Reinforcement Learning"
+    },
+    "LLM": {
+        "vector": {"x": 0.5773, "y": 0.5773, "z": -0.5773},
+        "tag": "LLM",
+        "description": "Large Language Models"
+    }
+}

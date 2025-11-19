@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles/intro.css" />
+    <link rel="stylesheet" href="/styles/work.css" />
+    <link rel="stylesheet" href="/styles/ask.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#intro" data-section="intro">Home</a></li>
+                <li><a href="#ask" data-section="ask">Ask me</a></li>
+                <li><a href="#about" data-section="about">About</a></li>
+                <li><a href="#skills" data-section="skills">Skills</a></li>
+                <li><a href="#experience" data-section="experience">Experience</a></li>
+                <li><a href="#contact" data-section="contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" onclick="applyTheme()">dark</button>
+        </nav>
+    </header>
+
+    <main id="content">
+        <!-- Components will be dynamically loaded here -->
+    </main>
+
+    <script src="script.js"></script>
+
+    <!-- Load Plotly -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <!-- Your JS -->
+    <script src="/scripts/intro.js"></script>
+
+    <script src="/scripts/ask.js"></script>
+</body>
+</html>

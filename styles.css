@@ -1,0 +1,120 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    transition-duration: 0.2s;
+}
+
+header {
+    background: var(--background);
+    padding: 1rem;
+}
+
+#theme-toggle {
+    margin-left: 30px;
+    padding: 8px 14px;
+    background: var(--secondary);
+    color: var(--text);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#theme-toggle:hover {
+    background: var(--primary);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: var(--back);
+}
+
+/* Section Layout */
+/* .section {
+    padding: 60px 20px;
+} */
+
+.container {
+    max-width: 100%;
+    margin: auto;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+/* Intro Section */
+.intro-section h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+/* Skills List */
+.skills-list {
+    padding-left: 20px;
+}
+
+/* Experience Items */
+.experience-item {
+    margin-bottom: 20px;
+}
+
+.duration {
+    font-size: 0.9rem;
+    color: var(--secondary);
+}
+
+/* Contact Section */
+.contact-list {
+    padding-left: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background: var(--secondary);
+    color: var(--text);
+    border: none;
+}
+
+.contact-form button {
+    width: 150px;
+    padding: 10px;
+    background: var(--primary);
+    color: var(--text);
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: var(--secondary);
+}

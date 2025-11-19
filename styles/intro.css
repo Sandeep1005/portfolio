@@ -1,0 +1,40 @@
+.intro-section {
+    padding: 0px 0;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    background-color: var(--secondary);
+    padding: 0px 0;
+    align-items: center;
+}
+
+.intro-left, .intro-right {
+    min-width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.intro-left {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 0 0 100px;
+}
+
+.vector-plot {
+    height: 90vh;
+}
+
+.intro-title {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.intro-text {
+    font-size: large;
+
+}
