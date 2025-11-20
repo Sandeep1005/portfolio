@@ -1,6 +1,5 @@
 :root{
     --gap: 60px;
-    --shadow: 0 8px 20px rgb(214, 214, 214);
 }
 
 .work-wrap{
@@ -23,14 +22,14 @@
     overflow: hidden;
     display:flex;
     flex-direction:column;
-    box-shadow:var(--shadow);
+    box-shadow: 0 8px 20px var(--shadow);
     transition:transform .18s ease, box-shadow .18s ease;
     cursor:default;
 }
 
 .work-project-tile:hover{
     transform:translateY(-6px);
-    box-shadow:var(--shadow);
+    box-shadow: 0 8px 20px var(--shadow);
 }
 
 /* top half image area */
