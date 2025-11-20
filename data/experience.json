@@ -1,0 +1,42 @@
+{
+    "DPA": {
+        "start": "2022-Jun",
+        "end": "",
+        "name": "Decimal Point Analytics",
+        "link": "https://decimalpointanalytics.com/",
+        "role": "Senior Data Scientist",
+        "logo": "/assets/decimalpointanalytics_logo.jpeg"
+    },
+    "TalentSprint": {
+        "start": "2024-Jun",
+        "end": "2025-Jan",
+        "name": "TalentSprint",
+        "link": "https://talentsprint.com/",
+        "role": "Data Science Mentor",
+        "logo": "assets/ts-accenture.webp"
+    },
+    "PractWorks": {
+        "start": "2021-Oct",
+        "end": "2022-Apr",
+        "name": "PractWorks",
+        "link": "https://practworks.com/",
+        "role": "Python Developer Intern",
+        "logo": "/assets/practworks.com_Logo.png"
+    },
+    "IIT Kanpur": {
+        "start": "2020-Aug",
+        "end": "2022-May",
+        "name": "Indian Institute of Technology, Kanpur",
+        "link": "https://www.iitk.ac.in/",
+        "role": "Master of Technology, SMD",
+        "logo": "/assets/iitklogo.png"
+    },
+    "IIT Patna": {
+        "start": "2015-Aug",
+        "end": "2019-May",
+        "name": "Indian Institute of Technology, Patna",
+        "link": "https://www.iitp.ac.in/",
+        "role": "Bachelor of Technology, Mechanical Engineering",
+        "logo": "/assets/iitplogo.svg"
+    }
+}
