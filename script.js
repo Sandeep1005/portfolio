@@ -20,13 +20,16 @@ function applyTheme() {
             document.documentElement.style.setProperty("--primary", theme.primary);
             document.documentElement.style.setProperty("--secondary", theme.secondary);
             document.documentElement.style.setProperty("--text", theme.text);
+            document.documentElement.style.setProperty("--textLighter", theme.textLighter);
+            document.documentElement.style.setProperty("--textLightest", theme.textLightest);
             document.documentElement.style.setProperty("--background", theme.background);
+            document.documentElement.style.setProperty("--shadow", theme.shadow);
         })
         .catch(err => console.error("Failed to load palette:", err));
 }
 
 // Load all components sequentially for a scrollable single-page layout
-const sections = ["intro", "work", "ask", "about", "skills", "experience", "contact"];
+const sections = ["intro", "work", "experience", "ask", "about", "skills", "contact"];
 
 function loadAllSections() {
     const content = document.getElementById("content");

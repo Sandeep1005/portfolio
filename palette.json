@@ -3,12 +3,18 @@
         "primary": "#2D6CDF",
         "secondary": "#A7C5FF",
         "text": "#1A1A1A",
-        "background": "#F7F9FC"
+        "textLighter": "#666",
+        "textLightest": "#ffffff",
+        "background": "#F7F9FC",
+        "shadow": "#00000014"
     },
     "dark": {
         "primary": "#4A90E2",
         "secondary": "#3B3B3B",
         "text": "#E6E6E6",
-        "background": "#121212"
+        "textLighter": "#666",
+        "textLightest": "#ffffff",
+        "background": "#121212",
+        "shadow": "#00000014"
     }
 }
