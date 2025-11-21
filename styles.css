@@ -118,3 +118,13 @@ header {
 .contact-form button:hover {
     background: var(--secondary);
 }
+
+.site-footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: var(--text);
+    opacity: 0.9;
+    user-select: none;
+    letter-spacing: 0.5px;
+}
