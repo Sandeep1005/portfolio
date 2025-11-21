@@ -29,7 +29,7 @@ function applyTheme() {
 }
 
 // Load all components sequentially for a scrollable single-page layout
-const sections = ["intro", "work", "experience", "ask", "about", "skills", "contact"];
+const sections = ["intro", "work", "experience", "ask", "contact"];
 
 function loadAllSections() {
     const content = document.getElementById("content");
