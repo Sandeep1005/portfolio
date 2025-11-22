@@ -33,7 +33,8 @@ async function runPlot() {
         text: [ "", item.tag ],      // show tag at endpoint only
         textposition: "top center",
         textfont: {
-            size: 12
+            size: 12,
+            color: "#FFFFFF"
         },
 
         // Hover shows description
