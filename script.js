@@ -1,69 +1,57 @@
-// Load color palette and apply selected theme
+// Load color palette + theme
 function applyTheme() {
-    toggleButton = document.getElementById("theme-toggle")
-    currTheme = toggleButton.textContent
-    if (currTheme == "light") {
-        themeName = "dark"
-        toggleButton.textContent = "dark"
-    }
-    else{
-        themeName = "light"
-        toggleButton.textContent = "light"
-    }
+    const toggleButton = document.getElementById("theme-toggle");
+    const currTheme = toggleButton.textContent;
+    const themeName = currTheme === "light" ? "dark" : "light";
+    toggleButton.textContent = themeName;
+
     fetch("palette.json")
         .then(res => res.json())
         .then(palette => {
             const theme = palette[themeName];
             if (!theme) return;
 
-            // Apply CSS variables
-            document.documentElement.style.setProperty("--primary", theme.primary);
-            document.documentElement.style.setProperty("--secondary", theme.secondary);
-            document.documentElement.style.setProperty("--text", theme.text);
-            document.documentElement.style.setProperty("--textLighter", theme.textLighter);
-            document.documentElement.style.setProperty("--textLightest", theme.textLightest);
-            document.documentElement.style.setProperty("--background", theme.background);
-            document.documentElement.style.setProperty("--shadow", theme.shadow);
-        })
-        .catch(err => console.error("Failed to load palette:", err));
+            Object.entries(theme).forEach(([key, value]) => {
+                document.documentElement.style.setProperty(`--${key}`, value);
+            });
+        });
 }
 
-// Load all components sequentially for a scrollable single-page layout
 const sections = ["intro", "work", "experience", "ask", "contact"];
 
-function loadAllSections() {
+async function loadAllSections() {
     const content = document.getElementById("content");
     content.innerHTML = "";
 
-    sections.forEach(section => {
-        fetch(`components/${section}.html`)
-            .then(response => response.text())
-            .then(html => {
-                const wrapper = document.createElement("div");
-                wrapper.innerHTML = html;
-                content.appendChild(wrapper);
-            })
-            .catch(error => console.error(`Error loading ${section}:`, error));
+    for (const section of sections) {
+        try {
+            const res = await fetch(`components/${section}.html`);
+            const html = await res.text();
+            const wrapper = document.createElement("div");
+            wrapper.innerHTML = html;
+            content.appendChild(wrapper);
+        } catch (err) {
+            console.error("Error loading component:", section, err);
+        }
+    }
+}
+
+function attachNavigation() {
+    const links = document.querySelectorAll("nav a[data-section]");
+    links.forEach(link => {
+        link.addEventListener("click", event => {
+            event.preventDefault();
+            const id = link.getAttribute("data-section");
+            const target = document.getElementById(id);
+            if (target) target.scrollIntoView({ behavior: "smooth" });
+        });
     });
 }
 
-// Initialize page
-window.addEventListener("DOMContentLoaded", () => {
-    applyTheme(); // Load default theme
-    loadAllSections();
-});
+async function init() {
+    applyTheme();
+    await loadAllSections();
+    attachNavigation();
+}
 
-// Smooth scroll navigation
-const links = document.querySelectorAll("nav a[data-section]");
-
-links.forEach(link => {
-    link.addEventListener("click", event => {
-        event.preventDefault();
-        const targetId = link.getAttribute("data-section");
-        const targetElement = document.getElementById(targetId);
-
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: "smooth" });
-        }
-    });
-});
+window.addEventListener("DOMContentLoaded", init);
