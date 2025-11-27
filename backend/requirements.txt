@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sqlite-utils
+sqlalchemy
+aiosqlite
+slowapi
+pydantic
+python-multipart
+jinja2
+email-validator
+python-dotenv
