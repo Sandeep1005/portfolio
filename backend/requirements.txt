@@ -9,3 +9,5 @@ python-multipart
 jinja2
 email-validator
 python-dotenv
+pymysql
+cryptography
