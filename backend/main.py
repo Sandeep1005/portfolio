@@ -6,7 +6,7 @@ from slowapi.errors import RateLimitExceeded
 from fastapi.responses import JSONResponse
 
 from models import ContactRequest
-from db import SessionLocal, init_db, ContactMessage
+from mysqldb import SessionLocal, init_db, ContactMessage
 from emailer import send_email
 
 # ------------ rate limiter ---------------
@@ -44,7 +44,7 @@ def get_db():
 # ------------ CONTACT ENDPOINT ---------------
 @app.post("/contact")
 @limiter.limit("5/minute")
-async def contact_form(req_data: ContactRequest, request: Request, db=Depends(get_db)):
+async def contact_form(request: Request, req_data: ContactRequest, db=Depends(get_db)):
     # Save to database
     entry = ContactMessage(
         name=req_data.name,
