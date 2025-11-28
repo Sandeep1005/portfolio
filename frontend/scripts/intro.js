@@ -1,7 +1,6 @@
 function waitForPlot() {
     const div = document.getElementById("vectorPlot");
     if (div) {
-        console.log("vectorPlot found — running plot");
         runPlot();
     } else {
         setTimeout(waitForPlot, 100);

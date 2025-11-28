@@ -1,7 +1,6 @@
 function waitForLoad() {
     const div = document.getElementById("experience-container");
     if (div) {
-        console.log("experience-container found — loading experience section");
         loadExperience();
     } else {
         setTimeout(waitForLoad, 100);
