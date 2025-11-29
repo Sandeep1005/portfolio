@@ -17,7 +17,15 @@ function initAskChat() {
     function addMessage(text, type) {
         const msg = document.createElement("div");
         msg.classList.add("chat-message", type);
-        msg.textContent = text;
+
+        if (type === "chat-bot") {
+            // Render markdown
+            msg.innerHTML = `<div class="markdown-content">${marked.parse(text)}</div>`;
+        } else {
+            // Normal user message
+            msg.textContent = text;
+        }
+        
         chatContainer.appendChild(msg);
 
         // Always scroll to latest

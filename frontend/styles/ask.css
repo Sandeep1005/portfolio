@@ -42,9 +42,16 @@
 }
 
 .chat-bot {
-    background: var(--secondary);
     color: var(--text);
-    align-self: flex-start;
+    align-self: stretch;        /* take full width */
+    max-width: 100%;            /* remove bubble limit */
+    padding: 0;                 /* remove bubble padding */
+}
+
+.chat-bot .markdown-content {
+    padding: 14px 18px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .chat-input-box {
@@ -74,4 +81,22 @@
 
 .chat-input-box button:hover {
     opacity: 0.8;
+}
+
+.markdown-content pre {
+    background: #1e1e1e;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+.markdown-content code {
+    background: #eee;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.markdown-content p {
+    margin: 8px 0;
 }
