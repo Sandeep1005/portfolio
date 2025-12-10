@@ -2,6 +2,7 @@ function waitForLoad() {
     const div = document.getElementById("experience-container");
     if (div) {
         loadExperience();
+        window.sectionReady("experience")
     } else {
         setTimeout(waitForLoad, 100);
     }

@@ -2,6 +2,7 @@ function waitForContact() {
     const div = document.getElementById("contact-form");
     if (div) {
         addEventListenerForContactForm();
+        window.sectionReady("contact")
     } else {
         setTimeout(waitForContact, 100);
     }

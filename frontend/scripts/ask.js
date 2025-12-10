@@ -72,3 +72,4 @@ function initAskChat() {
 }
 
 initAskChat();
+window.sectionReady("ask")
